@@ -25,7 +25,6 @@ def save_log(msg, log_file=LOGFILE):
     """Append a string to the logfile and print it to the console."""
     with open(log_file, 'a') as f:
         f.write(msg)
-        f.close
 
 
 def py2tex(row, col):
@@ -89,15 +88,16 @@ def get_directions(row, col, word):
 def choose_direction(directions):
     """Choose a random direction from the available ones."""
     available_directions = [k for k, v in directions.items() if v]
-    direction = random.choice(available_directions)
+    if not available_directions:
+        return None
 
-    return direction
+    return random.choice(available_directions)
 
 
 def get_positions(row, col, word, direction):
     """Return the list of positions (row, col) for the word in the given direction."""
-    l = len(word)
-
+    positions = [DIR_OFFSETS[direction](row, col, i) for i in range(len(word))]
+    '''
     if direction == 'N':
         positions = [(row - i, col) for i in range(l)]
     if direction == 'S':
@@ -114,7 +114,7 @@ def get_positions(row, col, word, direction):
         positions = [(row - i, col - i) for i in range(l)]
     if direction == 'SW':
         positions = [(row + i, col - i) for i in range(l)]
-
+    '''
     return positions
 
 
@@ -140,11 +140,14 @@ def add_word(word, matrix):
         # If there are available directions, try to add the word checking intersections
         if any(directions.values()):
             direction = choose_direction(directions)
+            if direction is None:
+                ctr += 1
+                continue
             positions = get_positions(row, col, word, direction)
             intersection_ok = check_intersections(
                 positions, used_positions, word)
 
-            if intersection_ok:
+            if intersection_ok and word not in added_words:
                 added_words.append(word)
                 for i, p in enumerate(positions):
                     used_positions[p] = word[i]

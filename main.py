@@ -16,6 +16,14 @@ from variables import *
 def main(rows=ROWS, cols=COLS, words_file=WORDS_FILE):
     """Main function to generate the word search puzzle."""
 
+    # # Reset global state
+    # global added_words, skipped_words, used_positions, used_vector_positions
+
+    # added_words = []
+    # skipped_words = []
+    # used_positions = {}
+    # used_vector_positions = {}
+
     puzzle_id = np.random.randint(1000, 10000)
     matrix = create_letter_matrix(rows, cols)
 
@@ -26,6 +34,7 @@ def main(rows=ROWS, cols=COLS, words_file=WORDS_FILE):
     # Check if an argument was passed and use it as file path
     if len(sys.argv) > 1:
         words_file = sys.argv[1]
+        save_log(f"** INFO: Using words file from command line: {words_file}")
 
     # Load the words file. In case of failure, exit the program
     words = load_file(words_file)
@@ -45,6 +54,9 @@ def main(rows=ROWS, cols=COLS, words_file=WORDS_FILE):
     # Add the words to the matrix
     matrix = update_letter_matrix(words, matrix)
 
+    if len(added_words) == 0:
+        save_log("** WARNING: no words could be added to the puzzle!")
+
     # Save the matrix of letters to a file to be used as backup
     np.savetxt(f"{GAME_BOARDS_DIR}{puzzle_id}.table",
                matrix, fmt="%s")
@@ -62,6 +74,7 @@ def main(rows=ROWS, cols=COLS, words_file=WORDS_FILE):
         f"\n\n"
         f"Puzzle ID: {puzzle_id:04d}.\n"
         f"Added words ({len(added_words)} of {num_words}): {added_words}\n"
+        f"Skipped words ({len(skipped_words)} of {num_words}): {skipped_words}\n"
         f"Bye!\n"
     )
     save_log(msg, LOGFILE)
