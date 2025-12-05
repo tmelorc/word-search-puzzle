@@ -1,0 +1,45 @@
+% !TeX root = main.tex
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usetikzlibrary{fit, matrix, positioning, shapes}
+
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\pgfplotstableread[header=false]{./game_boards/current.table}{\mytable}
+
+\makeatletter
+
+\AtBeginDocument{\centering\pagestyle{empty}\ttfamily}
+
+\tikzset{%
+  store number of columns in/.style={%
+    execute at end matrix={%
+      \xdef#1{\the\pgf@matrix@numberofcolumns}}},
+  store number of rows in/.style={%
+    execute at end matrix={%
+      \xdef#1{\the\pgfmatrixcurrentrow}}},
+  solution/.style = {thick,rounded corners=3pt,inner sep=0cm, outer sep=0cm},
+  solution vertical/.style = {solution,draw=blue!60!white,fill=blue,fill opacity=.1},
+  solution horizontal/.style = {solution,draw=red!60!white,fill=red,fill opacity=.1},
+  solution diagonal/.style = {solution,draw=green!80!black,fill=green,fill opacity=.1,text height=1.7em},
+  solution arrow/.style = {-latex,thick,fill opacity=1},
+  %%
+  words list/.style = {black,thick,text width=\textwidth,font=\normalsize,draw,rounded corners=3pt,align=center,inner sep=.5em,outer sep=0pt},
+  title/.style = {words list,font=\large,fill=yellow!20},
+  numbers/.style = {gray,text width=2ex,font=\footnotesize\itshape},
+  left row numbers/.style = {numbers,anchor=base east,align=right},
+  right row numbers/.style = {numbers,anchor=base west,align=left},
+  bottom row numbers/.style = {numbers,anchor=north,align=center},
+  top row numbers/.style = {numbers,anchor=south,align=center},
+}
+
+\pdfinfo{%
+  /Title (WSP -- Word Search Puzzle)
+  /Creator (Thiago de Melo)
+  /Author (Thiago de Melo)
+}
+
+
+
+\makeatother

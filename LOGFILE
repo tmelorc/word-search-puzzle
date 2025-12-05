@@ -1,0 +1,20 @@
+15 words loaded successfully from file words.txt!
+** INFO: trying to add APPLE
+** INFO: trying to add BANANA
+** INFO: trying to add ORANGE
+** INFO: trying to add GRAPE
+** INFO: trying to add PEAR
+** INFO: trying to add PEACH
+** INFO: trying to add MANGO
+** INFO: trying to add PAPAYA
+** INFO: trying to add KIWI
+** INFO: trying to add PINEAPPLE
+** INFO: trying to add STRAWBERRY
+** INFO: trying to add BLUEBERRY
+** INFO: trying to add WATERMELON
+** INFO: trying to add CHERRY
+** INFO: trying to add PLUM
+
+Puzzle ID: 4165.
+Added words (15 of 15): ['APPLE', 'BANANA', 'ORANGE', 'GRAPE', 'PEAR', 'PEACH', 'MANGO', 'PAPAYA', 'KIWI', 'PINEAPPLE', 'STRAWBERRY', 'BLUEBERRY', 'WATERMELON', 'CHERRY', 'PLUM']
+Bye!
