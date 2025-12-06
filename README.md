@@ -15,6 +15,19 @@ A Python tool that creates customizable word search puzzles and exports them usi
 
 **Note 3.** The data for each game board is saved in the `game_boards` folder. You can restore an old game simply by copying its data into the current files.
 
+**Note 4.** To disable `pdflatex` set `PDFLATEX=False` on `variables.py`.
+
+**Note 5.** You can pass a different word list file as an argument to `main.py`.
+
+**Note 6.** You can define the allowed directions by changing the following variables:
+```
+NORTH = True
+SOUTH = True
+EAST = True
+WEST = True
+DIAGONALS = True
+```
+
 # Project structure
 ```
 word-search-puzzle/
