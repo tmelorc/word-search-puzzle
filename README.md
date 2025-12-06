@@ -30,5 +30,15 @@ word-search-puzzle/
 │   └── ...
 │
 └── macros.tex              # LaTeX/TikZ templates used for rendering
-
 ```
+
+# Troubleshooting
+
+**Words not appearing**
+Increase `MAXIMAL_NUMBER_OF_TRIES` or reduce word count/length.
+
+**LaTeX compilation errors**
+Ensure your TeX distribution includes TikZ and standard packages.
+
+**Accents or unicode issues**
+Prefer uppercase/lowercase ASCII letters in `words.txt`.
