@@ -29,6 +29,6 @@ word-search-puzzle/
 │   ├── current.solution
 │   └── ...
 │
-└── tikz_templates/         # LaTeX/TikZ templates used for rendering
+└── macros.tex              # LaTeX/TikZ templates used for rendering
 
 ```
