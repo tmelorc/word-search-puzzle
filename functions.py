@@ -1,4 +1,3 @@
-# bug: está adiocionando palavras repetidas na lista de palavras adicionadas?
 import os
 import random
 import re
@@ -97,24 +96,7 @@ def choose_direction(directions):
 def get_positions(row, col, word, direction):
     """Return the list of positions (row, col) for the word in the given direction."""
     positions = [DIR_OFFSETS[direction](row, col, i) for i in range(len(word))]
-    '''
-    if direction == 'N':
-        positions = [(row - i, col) for i in range(l)]
-    if direction == 'S':
-        positions = [(row + i, col) for i in range(l)]
-    if direction == 'E':
-        positions = [(row, col + i) for i in range(l)]
-    if direction == 'W':
-        positions = [(row, col - i) for i in range(l)]
-    if direction == 'NE':
-        positions = [(row - i, col + i) for i in range(l)]
-    if direction == 'SE':
-        positions = [(row + i, col + i) for i in range(l)]
-    if direction == 'NW':
-        positions = [(row - i, col - i) for i in range(l)]
-    if direction == 'SW':
-        positions = [(row + i, col - i) for i in range(l)]
-    '''
+
     return positions
 
 

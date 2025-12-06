@@ -117,4 +117,4 @@ def main(rows=ROWS, cols=COLS, words_file=WORDS_FILE):
 
 
 if __name__ == "__main__":
-    main(rows=14, cols=22)
+    main()
