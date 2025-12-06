@@ -151,7 +151,6 @@ def add_word(word, matrix):
             if intersection_ok and word not in added_words:
                 added_words.append(word)
                 for i, p in enumerate(positions):
-                    print(positions)
                     used_positions[p] = word[i]
                     matrix[p] = word[i]
                 used_vector_positions[(row, col)] = (direction, len(word))
