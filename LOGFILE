@@ -1,20 +1,40 @@
-15 words loaded successfully from file words.txt!
+
+** WARNING: blank space in BELL PEPPER deleted.30 words loaded successfully from file words.txt!
 ** INFO: trying to add APPLE
 ** INFO: trying to add BANANA
 ** INFO: trying to add ORANGE
-** INFO: trying to add GRAPE
-** INFO: trying to add PEAR
-** INFO: trying to add PEACH
-** INFO: trying to add MANGO
-** INFO: trying to add PAPAYA
-** INFO: trying to add KIWI
-** INFO: trying to add PINEAPPLE
 ** INFO: trying to add STRAWBERRY
 ** INFO: trying to add BLUEBERRY
+** INFO: trying to add RASPBERRY
+** INFO: trying to add GRAPE
+** INFO: trying to add PINEAPPLE
+** INFO: trying to add MANGO
+** INFO: trying to add PAPAYA
 ** INFO: trying to add WATERMELON
-** INFO: trying to add CHERRY
+** INFO: trying to add CANTALOUPE
+** INFO: trying to add PEACH
+** INFO: trying to add PEAR
 ** INFO: trying to add PLUM
+** INFO: trying to add KIWI
+** INFO: trying to add AVOCADO
+** INFO: trying to add TOMATO
+** INFO: trying to add CARROT
+** INFO: trying to add POTATO
+** INFO: trying to add ONION
+** INFO: trying to add GARLIC
+** INFO: trying to add SPINACH
+** INFO: trying to add BROCCOLI
+** INFO: trying to add CAULIFLOWER
+** WARNING: skipping CAULIFLOWER after 30 tries.
+** INFO: trying to add CUCUMBER
+** WARNING: skipping CUCUMBER after 30 tries.
+** INFO: trying to add ZUCCHINI
+** INFO: trying to add LETTUCE
+** INFO: trying to add BELLPEPPER
+** INFO: trying to add EGGPLANT
+** WARNING: skipping EGGPLANT after 30 tries.
 
-Puzzle ID: 4165.
-Added words (15 of 15): ['APPLE', 'BANANA', 'ORANGE', 'GRAPE', 'PEAR', 'PEACH', 'MANGO', 'PAPAYA', 'KIWI', 'PINEAPPLE', 'STRAWBERRY', 'BLUEBERRY', 'WATERMELON', 'CHERRY', 'PLUM']
+Puzzle ID: 3966.
+Added words (27 of 30): ['APPLE', 'BANANA', 'ORANGE', 'STRAWBERRY', 'BLUEBERRY', 'RASPBERRY', 'GRAPE', 'PINEAPPLE', 'MANGO', 'PAPAYA', 'WATERMELON', 'CANTALOUPE', 'PEACH', 'PEAR', 'PLUM', 'KIWI', 'AVOCADO', 'TOMATO', 'CARROT', 'POTATO', 'ONION', 'GARLIC', 'SPINACH', 'BROCCOLI', 'ZUCCHINI', 'LETTUCE', 'BELLPEPPER']
+Skipped words (3 of 30): ['CAULIFLOWER', 'CUCUMBER', 'EGGPLANT']
 Bye!

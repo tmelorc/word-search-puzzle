@@ -1,10 +1,45 @@
 """
 Word Search Puzzle Generator Main Module
-Author: Thiago de Melo
-This module generates a word search puzzle by loading words from a specified file. It creates a letter matrix, places the words in it, and saves the puzzle in various formats. It also logs the process and can generate a PDF version of the puzzle using LaTeX.
 
-Check booleans in variables.py to enable/disable features like PDF generation.
+This module generates a word search puzzle from a given list of words. 
+It creates a letter matrix, places the words in it according to configurable directions, 
+and saves the puzzle in multiple formats (including LaTeX for PDF generation). 
+The module also logs the placement process and can optionally include the solution.
+
+---
+
+Author: Thiago de Melo
+E-mail: tmelo.mat@gmail.com
+
+---
+
+Usage:
+    1. Edit the list of words in `words.txt` (or provide another file as an argument).
+    2. Run the script:
+        python main.py [words_file.txt]
+    3. Compile the LaTeX output if PDF is desired:
+        pdflatex main.tex
+
+---
+
+Parameters:
+    words_file (str, optional): Path to a text file containing the list of words.
+                                 Defaults to 'words.txt' if not provided.
+
+Configuration (via `variables.py`):
+    MAXIMAL_NUMBER_OF_TRIES (int): Max attempts to place a word on the board.
+    PDFLATEX (bool): Enable/disable PDF generation via LaTeX.
+    NORTH, SOUTH, EAST, WEST, DIAGONALS (bool): Allowed word placement directions.
+
+---
+
+Outputs:
+    - main.tex: LaTeX source file for the puzzle.
+    - game_boards/current.board: Puzzle data file.
+    - game_boards/current.solution: Solution data file.
+    - main.pdf (optional): Compiled PDF of the puzzle.
 """
+
 
 import sys
 import numpy as np
@@ -82,4 +117,4 @@ def main(rows=ROWS, cols=COLS, words_file=WORDS_FILE):
 
 
 if __name__ == "__main__":
-    main()
+    main(rows=14, cols=22)

@@ -38,9 +38,9 @@ def random_letter():
     return chr(i)
 
 
-def random_origin():
+def random_origin(rows=ROWS, cols=COLS):
     """Choose a random origin (row, col) within the grid dimensions."""
-    row, col = np.random.randint(ROWS), np.random.randint(COLS)
+    row, col = np.random.randint(rows), np.random.randint(cols)
     return row, col
 
 
@@ -132,9 +132,10 @@ def add_word(word, matrix):
     save_log(f'\n** INFO: trying to add {word}', LOGFILE)
 
     ctr = 1
+    rows, cols = matrix.shape
 
     while ctr < MAXIMAL_NUMBER_OF_TRIES:
-        row, col = random_origin()
+        row, col = random_origin(rows, cols)
         directions = get_directions(row, col, word)
 
         # If there are available directions, try to add the word checking intersections
@@ -150,6 +151,7 @@ def add_word(word, matrix):
             if intersection_ok and word not in added_words:
                 added_words.append(word)
                 for i, p in enumerate(positions):
+                    print(positions)
                     used_positions[p] = word[i]
                     matrix[p] = word[i]
                 used_vector_positions[(row, col)] = (direction, len(word))
