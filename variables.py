@@ -5,7 +5,7 @@ GAME_BOARDS_DIR = 'game_boards/'
 WSP = 'Word Search Puzzle'
 
 # Boolean flags
-PDFLATEX = True
+PDFLATEX = False
 # SHOW_ANSWERS = True
 
 # Board dimensions

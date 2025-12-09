@@ -27,14 +27,13 @@
 ** INFO: trying to add CAULIFLOWER
 ** WARNING: skipping CAULIFLOWER after 30 tries.
 ** INFO: trying to add CUCUMBER
-** WARNING: skipping CUCUMBER after 30 tries.
 ** INFO: trying to add ZUCCHINI
+** WARNING: skipping ZUCCHINI after 30 tries.
 ** INFO: trying to add LETTUCE
 ** INFO: trying to add BELLPEPPER
 ** INFO: trying to add EGGPLANT
-** WARNING: skipping EGGPLANT after 30 tries.
 
-Puzzle ID: 3966.
-Added words (27 of 30): ['APPLE', 'BANANA', 'ORANGE', 'STRAWBERRY', 'BLUEBERRY', 'RASPBERRY', 'GRAPE', 'PINEAPPLE', 'MANGO', 'PAPAYA', 'WATERMELON', 'CANTALOUPE', 'PEACH', 'PEAR', 'PLUM', 'KIWI', 'AVOCADO', 'TOMATO', 'CARROT', 'POTATO', 'ONION', 'GARLIC', 'SPINACH', 'BROCCOLI', 'ZUCCHINI', 'LETTUCE', 'BELLPEPPER']
-Skipped words (3 of 30): ['CAULIFLOWER', 'CUCUMBER', 'EGGPLANT']
+Puzzle ID: 7662.
+Added words (28 of 30): ['APPLE', 'BANANA', 'ORANGE', 'STRAWBERRY', 'BLUEBERRY', 'RASPBERRY', 'GRAPE', 'PINEAPPLE', 'MANGO', 'PAPAYA', 'WATERMELON', 'CANTALOUPE', 'PEACH', 'PEAR', 'PLUM', 'KIWI', 'AVOCADO', 'TOMATO', 'CARROT', 'POTATO', 'ONION', 'GARLIC', 'SPINACH', 'BROCCOLI', 'CUCUMBER', 'LETTUCE', 'BELLPEPPER', 'EGGPLANT']
+Skipped words (2 of 30): ['CAULIFLOWER', 'ZUCCHINI']
 Bye!

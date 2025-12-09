@@ -1,6 +1,7 @@
 import os
 import random
 import re
+import platform
 import numpy as np
 import unidecode as uni
 from variables import *
@@ -41,6 +42,14 @@ def random_origin(rows=ROWS, cols=COLS):
     """Choose a random origin (row, col) within the grid dimensions."""
     row, col = np.random.randint(rows), np.random.randint(cols)
     return row, col
+
+
+def is_linux():
+    """Return True if the current OS is Linux, False otherwise."""
+    try:
+        return platform.system().lower() == 'linux'
+    except Exception:
+        return False
 
 
 def create_letter_matrix(rows, cols):
@@ -148,12 +157,16 @@ def add_word(word, matrix):
 
 
 def pdflatex(puzzle_id):
-    """Run pdflatex to generate the PDF of the puzzle."""
-    basename = 'main'
-    os.system(f'pdflatex {basename}.tex')
-    os.system(f'cp {basename}.pdf {GAME_BOARDS_DIR}{puzzle_id:04d}.pdf')
-    os.remove(f'{basename}.log')
-    os.remove(f'{basename}.aux')
+    """Run pdflatex to generate the PDF of the puzzle. Implemented only for Linux systems."""
+
+    if is_linux():
+        basename = 'main'
+        os.system(f'pdflatex {basename}.tex')
+        os.system(f'cp {basename}.pdf {GAME_BOARDS_DIR}{puzzle_id:04d}.pdf')
+        os.remove(f'{basename}.log')
+        os.remove(f'{basename}.aux')
+    else:
+        print(f'** WARNING: pdflatex option only implemented for Linux systems. Please, run pdflatex manually.')
 
 
 def validate_word(word):
